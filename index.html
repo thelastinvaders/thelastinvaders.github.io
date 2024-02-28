@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Invasion</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
         }
         p {
             margin: 20px;
@@ -21,6 +23,35 @@
             margin-top: 20px;
             text-align: center;
         }
+
+        /* Styles for screens wider than 600px */
+        @media (min-width: 600px) {
+            p {
+                font-size: 18px; /* Larger font size for wider screens */
+            }
+            .section {
+                float: left;
+                width: 50%; /* Each section takes up half the container width */
+            }
+        }
+        
+        /* Styles for screens wider than 1000px */
+        @media (min-width: 1000px) {
+            p {
+                font-size: 20px; /* Even larger font size for desktop screens */
+            }
+        }
+
+        .container {
+            width: 100%; /* Use percentages for flexible width */
+            max-width: 1200px; /* Limit the maximum width */
+            margin: 0 auto; /* Center the container */
+            overflow: hidden; /* Clear the float */
+        }
+        
+        .section {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -35,13 +66,19 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>About Us</h2>
-            <p>Dear Fellows, 
-                In 2019, we landed in Scotland for the first time. Since then, we never stopped invading the British Isles 
-                and our passionate interest for these lands, its culture and heritage kept growing. 
-                Here you can find the stories of our trips, pics, history, and tips if you want to follow our steps.</p>
-        </section>
+        <div class="container">
+            <div class="section">
+                <h2>About Us</h2>
+                <p>Dear Fellows, 
+                    In 2019, we landed in Scotland for the first time. Since then, we never stopped invading the British Isles 
+                    and our passionate interest for these lands, its culture and heritage kept growing. 
+                    Here you can find the stories of our trips, pics, history, and tips if you want to follow our steps.</p>
+            </div>
+            <div class="section">
+                <h2>Latest Adventures</h2>
+                <p>Check out our latest adventures and explorations. Discover the beauty and history of the lands we've visited, and get inspired for your own travels.</p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 My Website</p>
