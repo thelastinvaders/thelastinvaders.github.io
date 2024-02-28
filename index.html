@@ -11,45 +11,39 @@
         p {
             margin: 20px;
         }
+        nav {
+            background-color: red; /* Navigation bar background color */
+        }
         nav ul {
             list-style-type: none;
             padding: 0;
         }
         nav ul li {
             display: inline;
-            margin-right: 10px;
+        }
+        nav ul li a {
+            color: white; /* Link color */
+            text-decoration: none; /* Removes underline from links */
+            padding: 10px; /* Padding around links */
+        }
+        nav ul li a:hover {
+            background-color: darkred; /* Link hover background color */
         }
         footer {
             margin-top: 20px;
             text-align: center;
         }
-
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Center items horizontally */
             max-width: 1200px;
-            margin: 0 auto; /* Center the container */
-            text-align: center; /* Align text to the left within each flex item */
+            margin: 0 auto;
+            text-align: left;
         }
-
         .section {
-           padding: 20px;
-           width: 100%; /* Each section takes the full width */
-        }
-
-        @media (min-width: 600px) {
-            .section {
-                width: 50%; /* Adjust width for medium to large screens */
-            }
-        }
-
-        /* Optional: Larger font size for larger screens */
-        @media (min-width: 1000px) {
-            p {
-                font-size: 20px;
-            }
+            padding: 20px;
+            width: 100%;
         }
     </style>
 </head>
@@ -59,29 +53,5 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="pics.html">Pics</a></li>
-                <li><a href="itineraries.html">Itineraries</a></li>
-                <li><a href="history.html">History</a></li>                
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div class="section">
-                <h2>About Us</h2>
-                <p>Dear Fellows, 
-                    In 2019, we landed in Scotland for the first time. Since then, we never stopped invading the British Isles 
-                    and our passionate interest for these lands, its culture and heritage kept growing. 
-                    Here you can find the stories of our trips, pics, history, and tips if you want to follow our steps.</p>
-            </div>
-            <div class="section">
-                <h2>Latest Adventures</h2>
-                <p>Check out our latest adventures and explorations. Discover the beauty and history of the lands we've visited, and get inspired for your own travels.</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
-</body>
-</html>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="pics.html">Pics</a></li
