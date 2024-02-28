@@ -24,33 +24,32 @@
             text-align: center;
         }
 
-        /* Styles for screens wider than 600px */
-        @media (min-width: 600px) {
-            p {
-                font-size: 18px; /* Larger font size for wider screens */
-            }
-            .section {
-                float: left;
-                width: 50%; /* Each section takes up half the container width */
-            }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center items horizontally */
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container */
+            text-align: left; /* Align text to the left within each flex item */
         }
-        
-        /* Styles for screens wider than 1000px */
-        @media (min-width: 1000px) {
-            p {
-                font-size: 20px; /* Even larger font size for desktop screens */
+
+        .section {
+            padding: 20px;
+            flex: 1; /* Allow each section to grow */
+            min-width: 250px; /* Minimum width before wrapping */
+        }
+
+        @media (min-width: 600px) {
+            .section {
+                width: 50%; /* Adjust width for medium to large screens */
             }
         }
 
-        .container {
-            width: 100%; /* Use percentages for flexible width */
-            max-width: 1200px; /* Limit the maximum width */
-            margin: 0 auto; /* Center the container */
-            overflow: hidden; /* Clear the float */
-        }
-        
-        .section {
-            padding: 20px;
+        /* Optional: Larger font size for larger screens */
+        @media (min-width: 1000px) {
+            p {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -60,8 +59,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="pics.html">Pics</a></li>
+                <li><a href="itineraries.html">Itineraries</a></li>
+                <li><a href="history.html">History</a></li>                
             </ul>
         </nav>
     </header>
