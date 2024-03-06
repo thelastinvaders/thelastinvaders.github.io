@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Invasion</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Oswald", sans-serif;
             text-align: center;
         }
         p {
-            margin: 0px;
+            margin: 20px;
         }
         nav {
             background-color: #228B22; /* Navigation bar background color */
+            height: 60px;
+            line-height: 60px;
         }
         nav ul {
             list-style-type: none;
@@ -25,35 +34,62 @@
             color: white; /* Link color */
             text-decoration: none; /* Removes underline from links */
             padding: 10px; /* Padding around links */
+            font-size: 30px;
         }
         nav ul li a:hover {
             background-color: green; /* Link hover background color */
         }
+        
         footer {
             margin-top: 20px;
             text-align: center;
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: left;
+        
+        footer a i {
+            color: #228B22; /* Icon color */
+            margin: 0 10px; /* Spacing around icons */
+            font-size: 50px; /* Icon size */
         }
-        .section {
-            padding: 20px;
-            width: 100%;
+
+        footer a i:hover {
+            color: #228B22; /* Icon hover color */
+        }
+        
+        .content-wrapper {
+            font-family: "Oswald", sans-serif;
+            display: flex;
+            align-items: center; /* Vertically centers the items if they have different heights. */
+            justify-content: space-around; /* Adds some space between the image and the text. Adjust as necessary. */
+            text-align: left; /* Align text to the left within each flex item. */
+            max-width: 800px; /* Adjust the maximum width as necessary. */
+            margin: 0 auto; /* Center the content wrapper. */
+        }
+        .image-container {
+            flex: 1; /* Adjusts the space allocated to the image container. */
+            max-width: 100%; /* Optionally limits the image container's width. */
+        }
+        .text-container {
+            font-family: "Oswald", sans-serif;
+            flex: 2; /* Adjusts the space allocated to the text container. */
+        }
+        .section-image {
+            width: 100%; /* Make the image responsive within its container. */
+            height: auto; /* Maintain the aspect ratio. */
+        }
+        @media (max-width: 768px) { /* Adjusts layout for smaller screens. */
+            .content-wrapper {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Dear Fellows, Welcome to The Invasion</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="itineraries.html">Itineraries</a></li>
                 <li><a href="pics.html">Pics</a></li>
             </ul>
         </nav>
@@ -61,20 +97,22 @@
     <main>
         <div class="container">
             <div class="section">
-                <h2>About Us</h2>
-                <p>Dear Fellows, 
-                    In 2019, we landed in Scotland for the first time. Since then, we never stopped invading the British Isles 
-                    and our passionate interest for these lands, its culture and heritage kept growing. 
-                    Here you can find the stories of our trips, pics, history, and tips if you want to follow our steps.</p>
-            </div>
-            <div class="section">
-                <h2>Latest Adventures</h2>
-                <p>Check out our latest adventures and explorations. Discover the beauty and history of the lands we've visited, and get inspired for your own travels.</p>
+                <h2>The origin of the invasion</h2>
+                <div class="content-wrapper">
+                    <div class="image-container">
+                        <img src="about.jpg" alt="Landing in the British Isles" class="section-image">
+                    </div>
+                    <div class="text-container">
+                        <p>In 2019, we landed in the British Isles (Scotland, precisely) for the first time. Back then, our troops were largely not prepared, without walking boots and mostly invaded touristic spot. We did not know many things: that kilts in Braveheart are completely out of place, that Londonderry and Derry are more different things than you may know - and you better know - and that a hike to a peak just above 1000m (or 3500ft if you prefer) may seem an easy task if you were born at the foot of the Dolomites, but dear fellows, try the Mount Snowdown under the rain and clashed by the wind and let us know...</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 My Website</p>
+        <a href="https://instagram.com/thelastinvaders" target="_blank"><i class="fab fa-brands fa-instagram"></i></a>
+        <a href="https://www.threads.net/@thelastinvaders" target="_blank"><i class="fab fa-brands fa-threads"></i></a>
+        <p>&copy; 2024 @thelastinvaders</p>
     </footer>
 </body>
 </html>
